@@ -63,10 +63,10 @@ public class CssToXPath {
                                 if (attribute.charAt(attribute.length() - 1) != '\'') attribute += "'";
                             }
                             attributes.add(attribute);
+                            i++;
                             break;
                         default: throw new RuntimeException(format("Can't process Css. Unexpected symbol %s in attributes", css.charAt(i)));
                     }
-                    i++;
                 }
                 if (result.charAt(result.length()-1) == '/') result += "*";
                 result += "[" + String.join(" and ", attributes)+ "]";

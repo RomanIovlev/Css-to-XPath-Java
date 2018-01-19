@@ -26,6 +26,7 @@ public class Tests {
         assertEquals(cssToXPath("a"), "//a");
         assertEquals(cssToXPath("a div span button"), "//a//div//span//button");
         assertEquals(cssToXPath("div[type=text][checked=false] span[dt-args='t b p']"), "//div[@type='text' and @checked='false']//span[@dt-args='t b p']");
-        assertEquals(cssToXPath(".open [data-toggle]"), "//*[contains(@class,'open') and @data-toggle]");
+        assertEquals(cssToXPath(".open [data-toggle]"), "//*[contains(@class,'open')]//*[@data-toggle]");
+        assertEquals(cssToXPath(".profile-photo span"), "//*[contains(@class,'profile-photo')]//span");
     }
 }
