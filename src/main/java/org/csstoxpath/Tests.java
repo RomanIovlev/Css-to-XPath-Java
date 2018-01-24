@@ -15,6 +15,8 @@ public class Tests {
         assertEquals(cssToXPath("div"), "//div");
         assertEquals(cssToXPath(".test-class"), "//*[contains(@class,'test-class')]");
         assertEquals(cssToXPath("#test-id"), "//*[@id='test-id']");
+        assertEquals(cssToXPath("button.test-class"), "//button[contains(@class,'test-class')]");
+        assertEquals(cssToXPath("button#test-id"), "//button[@id='test-id']");
         assertEquals(cssToXPath("[type=testtype]"), "//*[@type='testtype']");
         assertEquals(cssToXPath("[data-type=testdata]"), "//*[@data-type='testdata']");
         assertEquals(cssToXPath("[class='test data cl']"), "//*[@class='test data cl']");

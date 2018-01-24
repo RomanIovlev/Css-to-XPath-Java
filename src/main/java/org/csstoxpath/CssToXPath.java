@@ -34,14 +34,14 @@ public class CssToXPath {
                             i++; start = i;
                             while (i < length && isAttrLetter(css.charAt(i))) i++;
                             attributes.add(convertToClass(i == length
-                                ? css.substring(1)
+                                ? css.substring(start)
                                 : css.substring(start, i)));
                             break;
                         case '#':
                             i++; start = i;
                             while (i < length && isAttrLetter(css.charAt(i))) i++;
                             attributes.add(convertToId(i == length
-                                ? css.substring(1)
+                                ? css.substring(start)
                                 : css.substring(start, i)));
                             break;
                         case '[':
